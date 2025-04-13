@@ -1,0 +1,457 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #426544;
+    padding: 5px 10px; /* Diminuir o preenchimento para reduzir o tamanho */
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    background-color: #426544; /* Mesma cor do cabeçalho */
+    border-radius: 10px; /* Opcional: bordas arredondadas */
+}
+
+.logo img {
+    display: block; /* Remove espaços indesejados ao redor da imagem */
+    max-width: 150px; /* Limita o tamanho da logo */
+    height: auto;
+}
+
+/* Barra de pesquisa */
+.search-container {
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Reduzir o espaçamento entre os elementos */
+    margin: 5px 0;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 5px 8px;
+    background-color: #426544;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Diminuir a fonte */
+}
+
+.search-container button:hover {
+    background-color: #69996c;
+}
+
+/* Navegação */
+/* Esconde o menu por padrão em dispositivos pequenos */
+.nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #426544; 
+    transition: all 0.3s ease-in-out;
+}
+
+/* Exibe o menu quando a classe 'active' é adicionada */
+.nav.active {
+    display: flex;
+}
+
+/* Estilo opcional para os links dentro do menu */
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 14px; /* Reduzir o tamanho da fonte */
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+/* Botão do menu (aparece em telas menores) */
+.menu-toggle {
+    font-size: 2rem;
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+/* Ajusta o menu na visualização desktop */
+@media (min-width: 768px) {
+    .nav {
+        display: flex; /* Sempre visível em telas maiores */
+        position: static; /* Retorna ao fluxo normal */
+        flex-direction: row; /* Links em linha */
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .menu-toggle {
+        display: block; /* Exibe o botão de menu em telas menores */
+    }
+
+    .nav {
+        display: none; /* Esconde o menu inicialmente */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    .search-container {
+        width: 100%; /* Garante que a barra de pesquisa ocupe toda a largura */
+        margin: 5px 0; /* Reduz margem vertical */
+    }
+
+    .nav a {
+        padding: 10px 0;
+        font-size: 12px; /* Ajuste para melhor leitura */
+    }
+}
+
+/* Garantir que elementos se ajustem à largura da viewport */
+* {
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-family: Arial, sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    color: #343a40;
+  }
+
+  #app {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#login-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+#login-section input,
+#login-section select,
+#login-section button {
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+footer {
+    background-color: #426544;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.contato {
+    font-size: 0.9em;
+    color: #fff;
+    margin-top: 5px;
+}
+
+/* Botão Voltar ao Topo */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #426544;
+    color: #fff;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 18px;
+    display: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #69996c;
+    transform: scale(1.1);
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .header-right {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-item {
+        width: 90%;
+    }
+
+    .about-section, .contact-section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        max-width: 100px;
+    }
+
+    .nav a {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+/* Seção Sobre */
+.about-section {
+    text-align: justify;
+    color: #69996c;
+    padding: 5px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-section img {
+    width: 20%;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Seção Contato */
+.contact-form {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 2px;
+    color: #426544;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%; /* Faz os campos ocuparem toda a largura disponível */
+  max-width: 400px; /* Define um tamanho máximo */
+  padding: 10px;
+  border: 2px solid #426544;
+  border-radius: 10px;
+  box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+.form-group textarea {
+  resize: none; /* Impede o redimensionamento */
+  height: 50px; /* Ajuste a altura para ficar proporcional */
+}
+
+.error-message {
+    display: none;
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+/* Responsividade da Seção Contato */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+/* Map */
+.map-container {
+    display: flex; /* Define um layout flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente, se necessário */
+    margin-top: 40px;
+  }
+  
+  .map-container iframe {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+/* Rodapé */
+footer {
+    background-color: #426544;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+footer .contato {
+    margin-top: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 200px;
+    }
+
+    .header-right {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .carousel-item {
+        flex: 0 0 80%;
+        margin-bottom: 20px;
+    }
+
+    .about-section img {
+        width: 30%;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .carousel-item {
+        flex: 0 0 100%;
+    }
+
+    .about-section img {
+        width: 40%;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .carousel-item {
+        width: 100%;
+    }
+
+    .about-section img {
+        width: 50%;
+    }
+
+    footer {
+        font-size: 0.7rem;
+        padding: 10px;
+    }
+}

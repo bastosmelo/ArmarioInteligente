@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Armário Inteligente - Tokseg - Squad 19</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        body {
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        }
+
+        header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #426544;
+        padding: 5px 10px; /* Diminuir o preenchimento para reduzir o tamanho */
+        top: 0;
+        z-index: 1000;
+        }
+
+        .logo img {
+        display: block; /* Remove espaços indesejados ao redor da imagem */
+        max-width: 150px; /* Limita o tamanho da logo */
+        height: auto;
+        }
+
+        .home a {
+        background-color: #426544;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        }
+
+        .home a:hover {
+        background-color: #69996c;
+        }
+
+        .members-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        flex: 1;
+        }
+
+        .member {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        }
+
+        .member p {
+        margin-right: 10px;
+        font-weight: bold;
+        }
+
+        .social-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        margin-right: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        }
+
+        .member img.social-links {
+        border: 2px solid #ccc;
+        }
+
+        .top-link {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #333;
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 20px;
+        }
+
+        footer {
+        background-color: #426544;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        margin-top: auto;
+        }
+
+        footer a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        }
+
+        .contato {
+        font-size: 0.9em;
+        color: #fff;
+        margin-top: 5px;
+        }
+    </style>
+    </head>
+    <body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+        <img src="Imagens/Tokseg.png" alt="Logo Tokseg" />
+        </div>
+        <div class="home">
+        <a href="index.html">Home</a>
+        </div>
+    </header>
+
+    <!-- Lista de membros centralizada -->
+    <div class="members-list">
+        <div class="member">
+            <img src="Imagens/Arthur.jpg" class="social-links">
+            <p>Arthur Costa Ribeiro</p>
+            <a href="" target="_blank">
+                <img src="Imagens/LinkedIn.jpg" alt="LinkedIn" class="social-links">
+            </a>
+        </div>
+        <div class="member">
+            <img src="Imagens/Bruno.png" class="social-links">
+            <p>Bruno Bastos Melo</p>
+            <a href="https://www.linkedin.com/in/bruno-bastos-melo-442ba9bb" target="_blank">
+                <img src="Imagens/LinkedIn.jpg" alt="LinkedIn" class="social-links">
+            </a>
+        </div>
+        <div class="member">
+            <img src="Imagens/Carlos Eduardo.jpg" class="social-links">
+            <p>Carlos Eduardo Lima Santos</p>
+            <a href="" target="_blank">
+                <img src="Imagens/LinkedIn.jpg" alt="LinkedIn" class="social-links">
+            </a>
+        </div>
+        <div class="member">
+            <img src="Imagens/Edy.jpg" class="social-links">
+            <p>Edy Verder Novais Rocha</p>
+            <a href="https://www.linkedin.com/in/edy-rocha-0119a325b" target="_blank">
+                <img src="Imagens/LinkedIn.jpg" alt="LinkedIn" class="social-links">
+            </a>
+        </div>
+        <div class="member">
+            <img src="Imagens/Gabriel.jpg" class="social-links">
+            <p>Gabriel França Santos Nunes</p>
+            <a href="" target="_blank">
+                <img src="Imagens/LinkedIn.jpg" alt="LinkedIn" class="social-links">
+            </a>
+        </div>
+        <div class="member">
+            <img src="Imagens/Jean.jpeg" class="social-links">
+            <p>Jean Lucas Santos Oliveira Manhães</p>
+            <a href="https://www.linkedin.com/in/jean-lucas-a3740a258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BioAQuh0sSc6AYnGuTQGtlg%3D%3D" target="_blank">
+                <img src="Imagens/LinkedIn.jpg" alt="LinkedIn" class="social-links">
+            </a>
+        </div>
+        <div class="member">
+            <img src="Imagens/João.jpeg" class="social-links">
+            <p>João Gabriel Silva Café</p>
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-gabriel-silva-caf%C3%A9-9a0b572b7?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BZ1yNVhWQQXOhtLxmPQqZ1g%3D%3D" target="_blank">
+                <img src="Imagens/LinkedIn.jpg" alt="LinkedIn" class="social-links">
+            </a>
+        </div>
+        <div class="member">
+            <img src="Imagens/Lucas.jpeg" class="social-links">
+            <p>Lucas Gabriel Santos Alves</p>
+            <a href="https://www.linkedin.com/in/lucas-gabriel-santos-alves-9a752a323?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BgzdyGCriQXOaKg4wkgBdYQ%3D%3D" target="_blank">
+                <img src="Imagens/LinkedIn.jpg" alt="LinkedIn" class="social-links">
+            </a>
+        </div>
+        <div class="member">
+            <img src="Imagens/Mariana.jpg" class="social-links">
+            <p>Mariana Venceslau Cavalcante</p>
+            <a href="" target="_blank">
+                <img src="Imagens/LinkedIn.jpg" alt="LinkedIn" class="social-links">
+            </a>
+        </div>
+        <div class="member">
+            <img src="Imagens/MAurício.jpg" class="social-links">
+            <p>Maurício Barretto Quintella Filho</p>
+            <a href="" target="_blank">
+                <img src="Imagens/LinkedIn.jpg" alt="LinkedIn" class="social-links">
+            </a>
+        </div>
+        <div class="member">
+            <img src="Imagens/Saulo.jpeg" class="social-links">
+            <p>Saulo Vinicius Calixto Silva dos Santos</p>
+            <a href="https://www.linkedin.com/in/saulo-vinicius-083b20250?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BO72FbDo3S%2F2kGEthudzcVA%3D%3D" target="_blank">
+                <img src="Imagens/LinkedIn.jpg" alt="LinkedIn" class="social-links">
+            </a>
+        </div>
+        <div class="member">
+            <img src="Imagens/Samuel.jpeg" class="social-links">
+            <p>Vanderlei Samuel Silva</p>
+            <a href="https://www.linkedin.com/in/sammblanc?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BAamMfdzMR2yh3fpssyw90Q%3D%3D" target="_blank">
+                <img src="Imagens/LinkedIn.jpg" alt="LinkedIn" class="social-links">
+            </a>
+        </div>
+    </div>
+    <!-- Rodapé -->
+    <footer>
+        <a href="squad19.html">Squad 19 © 2025. Todos os direitos reservados.</a>
+        <div class="contato">
+            <p>Endereço: Av. Murilo Dantas, 300 - Farolândia, Aracaju - SE, CEP: 49.032-490</p>
+            <p>E-mail: contato@squad19.com.br</p>
+        </div>
+    </footer>
+</body>
+</html>
