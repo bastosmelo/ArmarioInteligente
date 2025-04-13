@@ -224,6 +224,28 @@ h2 {
     border-radius: 5px;
 }
 
+button,
+#entrar,
+input[type="submit"],
+input[type="reset"] {
+    padding: 8px 12px;
+    background-color: #426544;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+#entrar:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #69996c;
+}
+
+
 /* Estilo para ícones sociais */
 .social-icons {
     text-align: center;
@@ -282,6 +304,11 @@ footer a {
     font-size: 0.9em;
     color: #fff;
     margin-top: 5px;
+}
+
+.contact-form button[type="submit"] {
+    display: block;
+    margin: 20px auto 0 auto; /* Centraliza horizontalmente e dá espaço acima */
 }
 
 /* Botão Voltar ao Topo */
