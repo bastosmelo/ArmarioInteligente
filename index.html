@@ -19,108 +19,112 @@
             <button id="clearButton" aria-label="Botão Limpar">Limpar</button>
         </div>
         <div class="container">
-            <button class="menu-toggle" aria-label="Abrir Menu">
-              &#9776; <!-- Ícone do menu hambúrguer -->
-            </button>
+            <button class="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
             <nav class="nav">
-              <a href="#app">Login</a>
-              <a href="#about-title">Sobre</a>
-              <a href="#contact">Contato</a>
+                <a href="#app">Login</a>
+                <a href="#about-title">Sobre</a>
+                <a href="#contact">Contato</a>
             </nav>
-            <!-- Botão Voltar ao Topo -->
             <a href="#" id="back-to-top" class="top-link" aria-label="Voltar ao topo">&#9650;</a>
         </div>
     </header>
-    <div id="app">
-        <h1>Armário Inteligente - TOKSEG</h1>
-        <div id="login-section">
-            <input type="text" id="username" placeholder="Usuário">
-            <input type="password" id="password" placeholder="Senha">
-            <select id="user-type">
-                <option value="morador">Morador</option>
-                <option value="entregador">Entregador</option>
-                <option value="admin">Administrador</option>
-            </select>
-            <!-- Ícones Sociais -->
-            <div class="social-icons">
-                <a href="index.html"><img src="Imagens/Google.jpg" alt="Login com Google" class="social-links"></a>
-                <a href="index.html"><img src="Imagens/Facebook.jpg" alt="Login com Facebook" class="social-links"></a>
-                <a href="index.html"><img src="Imagens/X-Twiter.jpg" alt="Login com X-Twiter" class="social-links"></a>
-            </div>
-            <button id="entrar">Entrar</button>
-            <!-- Link para Cadastro -->
-            <p class="signup-link">Não é cadastrado? <a href="cadastro.html">Cadastre-se</a></p>
-        </div>
-        <div id="morador-section" style="display: none;">
-            <h2>Morador</h2>
-            <p>Notificações de entrega:</p>
-            <ul id="notificacoes"></ul>
-            <input type="text" id="codigo-retirada" placeholder="Código de Retirada">
-            <button id="retirar-encomenda">Retirar Encomenda</button>
-        </div>
-        <div id="entregador-section" style="display: none;">
-            <h2>Entregador</h2>
-            <input type="text" id="destinatario" placeholder="Destinatário (Bloco-Apto)">
-            <input type="text" id="codigo-deposito" placeholder="Código de Depósito">
-            <button id="depositar-encomenda">Depositar Encomenda</button>
-        </div>
-        <div id="admin-section" style="display: none;">
-            <h2>Administrador</h2>
-            <p>Registros de entrega:</p>
-            <ul id="registros"></ul>
-            <button id="gerenciar-usuarios">Gerenciar Usuários</button>
-            <button id="resolver-problemas">Resolver Problemas</button>
-        </div>
-    </div>
 
-    <!-- Seção Sobre -->
-    <div id="about-title" class="title">
-        <h1>O que é?</h1>
-    </div>
-    <section id="about" class="about-section">
-        <p>Um armário inteligente com compartimentos seguros para entregas. O entregador 
-            deposita a encomenda, e o morador recebe uma notificação com código de acesso 
-            para retirada no momento ideal, garantindo segurança, praticidade e flexibilidade.</p>
-    </section>
-    
-    <!-- Seção Contato -->
-    <div id="contact" class="contact-form">
-        <h1>Contato</h1>
-        <form id="contact-form">
-            <div class="form-group">
-                <label for="name">Nome</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="subject">Assunto</label>
-                <select id="subject" name="subject" required>
-                    <option value="" disabled selected>Selecione o assunto</option>
-                    <option value="login">Login</option>
-                    <option value="senha">Senha</option>
-                    <option value="doacao">Como se cadastrar</option>
-                    <option value="duvidas">Dúvidas</option>
-                    <option value="elogios">Elogios</option>
-                    <option value="sugestoes">Sugestões</option>
+    <main>
+        <section id="app">
+            <h1>Armário Inteligente - TOKSEG</h1>
+            <div id="login-section">
+                <input type="text" id="username" placeholder="Usuário">
+                <input type="password" id="password" placeholder="Senha">
+                <select id="user-type">
+                    <option value="morador">Morador</option>
+                    <option value="entregador">Entregador</option>
+                    <option value="admin">Administrador</option>
                 </select>
+                <div class="social-icons">
+                    <a href="index.html"><img src="Imagens/Google.jpg" alt="Login com Google" class="social-links"></a>
+                    <a href="index.html"><img src="Imagens/Facebook.jpg" alt="Login com Facebook" class="social-links"></a>
+                    <a href="index.html"><img src="Imagens/X-Twiter.jpg" alt="Login com X-Twiter" class="social-links"></a>
+                </div>
+                <button id="login-button">Entrar</button>
+                <p class="signup-link">Não é cadastrado? <a href="cadastro.html">Cadastre-se</a></p>
             </div>
-            <div class="form-group">
-                <label for="message">Mensagem</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+
+            <div id="morador-section" style="display: none;">
+                <h2>Morador</h2>
+                <p>Notificações de entrega:</p>
+                <ul id="notificacoes"></ul>
+                <input type="text" id="codigo-retirada" placeholder="Código de Retirada">
+                <button id="retirar-encomenda">Retirar Encomenda</button>
             </div>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
- 
-    <!-- Google Maps -->
-    <section> 
-        <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4269.866512627229!2d-37.059857973942044!3d-10.96896281292718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab143dce5a8f5%3A0xdce07c193ed061d0!2sUnit%20-%20Universidade%20Tiradentes!5e1!3m2!1spt-BR!2sbr!4v1730418824794!5m2!1spt-BR!2sbr" width="45%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </section>
+
+            <div id="entregador-section" style="display: none;">
+                <h2>Entregador</h2>
+                <input type="text" id="destinatario" placeholder="Destinatário (Bloco-Apto)">
+                <input type="text" id="codigo-deposito" placeholder="Código de Depósito">
+                <button id="depositar-encomenda">Depositar Encomenda</button>
+            </div>
+
+            <div id="admin-section" style="display: none;">
+                <h2>Administrador</h2>
+                <p>Registros de entrega:</p>
+                <ul id="registros"></ul>
+                <button id="gerenciar-usuarios">Gerenciar Usuários</button>
+                <button id="resolver-problemas">Resolver Problemas</button>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="about-title" class="title">
+            <h1>O que é?</h1>
+        </section>
+        <section id="about" class="about-section">
+            <p>Um armário inteligente com compartimentos seguros para entregas. O entregador
+                deposita a encomenda, e o morador recebe uma notificação com código de acesso
+                para retirada no momento ideal, garantindo segurança, praticidade e flexibilidade.</p>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contact" class="contact-form">
+            <h1>Contato</h1>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message">Nome é obrigatório.</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message">E-mail inválido.</span>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Assunto</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>Selecione o assunto</option>
+                        <option value="login">Login</option>
+                        <option value="senha">Senha</option>
+                        <option value="doacao">Como se cadastrar</option>
+                        <option value="duvidas">Dúvidas</option>
+                        <option value="elogios">Elogios</option>
+                        <option value="sugestoes">Sugestões</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error-message">Mensagem é obrigatória.</span>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <!-- Google Maps -->
+        <section>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4269.866512627229!2d-37.059857973942044!3d-10.96896281292718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab143dce5a8f5%3A0xdce07c193ed061d0!2sUnit%20-%20Universidade%20Tiradentes!5e1!3m2!1spt-BR!2sbr!4v1730418824794!5m2!1spt-BR!2sbr" width="45%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
 
     <!-- Rodapé -->
     <footer>
@@ -132,6 +136,5 @@
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
